@@ -67,8 +67,8 @@ def test_step(model, dataloader, loss_fn, acccuracy_fn, optimizer):
       X, y = X.to(device), y.to(device)
 
       test_pred = model(X)
-      test_loss = loss_fn(test_pred, y)
-      test_acc = accuracy_fn(y_pred, y)
+      test_loss += loss_fn(test_pred, y)
+      test_acc += accuracy_fn(test_pred, y)
 
     test_loss /= len(dataloader)
     test_acc /= len(dataloader)
