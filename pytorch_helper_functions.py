@@ -18,7 +18,7 @@ def eval_model(model: torch.nn.Module,
     loss /= len(data_loader)
     acc /= len(data_loader)
 
-  return {'Model_name': model.__class__.__name__, 'model_loss': loss.item(),'model acc': acc}
+  return {'Model_name': model.__class__.__name__, 'model_loss': loss.item(),'model acc': acc.item()}
 
 
 
