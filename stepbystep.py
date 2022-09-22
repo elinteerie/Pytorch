@@ -1,3 +1,8 @@
+import numpy as np
+import torch as torch
+import datetime
+import matplotlib.pyplot as plt
+
 class StepbyStep(object):
   def __init__(self, model, loss_fn, optimizer):
     self.model = model
